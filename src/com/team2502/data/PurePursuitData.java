@@ -12,7 +12,7 @@ import java.util.Objects;
 /**
  * Represents data from Andrew's Pure Pursuit Implementation
  */
-public class PurePursuitData extends ComplexData<PurePursuitData>
+public final class PurePursuitData extends ComplexData<PurePursuitData>
 {
     private final double[] robot;
     private final double[] circle;

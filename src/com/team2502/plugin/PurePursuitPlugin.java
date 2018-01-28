@@ -8,6 +8,7 @@ import com.team2502.plugin.widget.data.types.PurePursuitType;
 import edu.wpi.first.shuffleboard.api.data.DataType;
 import edu.wpi.first.shuffleboard.api.data.DataTypes;
 import edu.wpi.first.shuffleboard.api.plugin.Plugin;
+import edu.wpi.first.shuffleboard.api.plugin.Requires;
 import edu.wpi.first.shuffleboard.api.tab.TabInfo;
 import edu.wpi.first.shuffleboard.api.widget.ComponentType;
 import edu.wpi.first.shuffleboard.api.plugin.Description;
@@ -17,14 +18,17 @@ import edu.wpi.first.shuffleboard.api.widget.WidgetType;
 import java.util.List;
 import java.util.Map;
 
+
 @Description(
         group = "com.team2502.plugin",
         name = "Pure Pursuit",
         version = "0.0.1",
         summary = "Displays what the robot is 'thinking' when it drives using Pure Pursuit."
 )
+@Requires(group = "edu.wpi.first.shuffleboard", name = "NetworkTables", minVersion = "1.0.0")
 public class PurePursuitPlugin extends Plugin
 {
+
     @Override
     public List<DataType> getDataTypes()
     {

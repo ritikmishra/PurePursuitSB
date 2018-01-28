@@ -1,0 +1,38 @@
+plugins {
+    id "java"
+}
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
+
+dependencies {
+    implementation(group: "edu.wpi.first.shuffleboard", name: "api", version: "1.0")
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.5'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/']
+        }
+        resources {
+            srcDirs = ['res/']
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'Hello'
+    }
+}

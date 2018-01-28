@@ -1,6 +1,6 @@
-package com.team2502.data.types;
+package com.team2502.plugin.widget.data.types;
 
-import com.team2502.data.PurePursuitData;
+import com.team2502.plugin.widget.data.PurePursuitData;
 import edu.wpi.first.shuffleboard.api.data.ComplexDataType;
 import org.joml.ImmutableVector2f;
 

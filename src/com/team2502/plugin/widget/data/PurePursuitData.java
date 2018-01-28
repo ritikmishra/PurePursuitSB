@@ -1,4 +1,4 @@
-package com.team2502.data;
+package com.team2502.plugin.widget.data;
 
 import edu.wpi.first.shuffleboard.api.data.ComplexData;
 import edu.wpi.first.shuffleboard.api.util.Maps;
@@ -12,7 +12,7 @@ import java.util.Objects;
 /**
  * Represents data from Andrew's Pure Pursuit Implementation
  */
-public final class PurePursuitData extends ComplexData<PurePursuitData>
+public class PurePursuitData extends ComplexData<PurePursuitData>
 {
     private final double[] robot;
     private final double[] circle;

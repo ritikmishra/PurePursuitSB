@@ -10,14 +10,19 @@ import edu.wpi.first.shuffleboard.api.data.DataTypes;
 import edu.wpi.first.shuffleboard.api.plugin.Plugin;
 import edu.wpi.first.shuffleboard.api.tab.TabInfo;
 import edu.wpi.first.shuffleboard.api.widget.ComponentType;
-import edu.wpi.first.shuffleboard.api.widget.Description;
+import edu.wpi.first.shuffleboard.api.plugin.Description;
 import edu.wpi.first.shuffleboard.api.widget.LayoutClass;
 import edu.wpi.first.shuffleboard.api.widget.WidgetType;
 
 import java.util.List;
 import java.util.Map;
 
-@Description(name = "Pure Pursuit Visualizer", dataTypes = PurePursuitData.class)
+@Description(
+        group = "com.team2502.plugin",
+        name = "Pure Pursuit",
+        version = "0.0.1",
+        summary = "Displays what the robot is 'thinking' when it drives using Pure Pursuit."
+)
 public class PurePursuitPlugin extends Plugin
 {
     @Override
@@ -33,7 +38,8 @@ public class PurePursuitPlugin extends Plugin
     }
 
     @Override
-    public Map<DataType, ComponentType> getDefaultComponents() {
+    public Map<DataType, ComponentType> getDefaultComponents()
+    {
         return ImmutableMap.<DataType, ComponentType>builder()
                 .put(PurePursuitType.Instance, WidgetType.forAnnotatedWidget(PurePursuitWidget.class))
                 .build();

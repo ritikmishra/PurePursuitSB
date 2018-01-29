@@ -27,11 +27,11 @@ build/
 *.iws*
 
 ## Gradle
-.gradle/
-/gradle
+#.gradle/
+#/gradle
 #gradlew.bat
 #gradlew
-deploy.sh
+#deploy.sh
 
 ## Deploy artifact
 dist/FRCUserProgram.jar

@@ -1,6 +1,7 @@
 plugins {
     id "java"
     id "idea"
+    id("com.github.johnrengelman.shadow") version "2.0.1"
 }
 repositories {
     mavenCentral()
@@ -16,6 +17,7 @@ dependencies {
     implementation(group: "edu.wpi.first.shuffleboard", name: "api", version: "1.0")
     compile "org.joml:joml:1.9.9:beta0"
     compile 'com.google.guava:guava:23.6-jre'
+    implementation(group: "org.fxmisc.easybind", name: "easybind", version: "1.0.1")
 }
 
 
@@ -26,10 +28,10 @@ task wrapper(type: Wrapper) {
 sourceSets {
     main {
         java {
-            srcDirs = ['src/']
+            srcDirs = ['src/main/java']
         }
         resources {
-            srcDirs = ['res/']
+            srcDirs = ['src/main/resources']
         }
     }
 }

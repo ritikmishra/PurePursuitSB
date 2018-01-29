@@ -84,17 +84,17 @@ public class PurePursuitData extends ComplexData<PurePursuitData>
         return waypoints;
     }
 
-    public PurePursuitData withRobot(double[] circle, List<ImmutableVector2f> waypoints)
+    public PurePursuitData withRobot(double[] robot)
     {
         return new PurePursuitData(robot, circle, waypoints);
     }
 
-    public PurePursuitData withCircle(double[] robot, List<ImmutableVector2f> waypoints)
+    public PurePursuitData withCircle(double[] circle)
     {
         return new PurePursuitData(robot, circle, waypoints);
     }
 
-    public PurePursuitData withWaypoints(double[] robot, double[] circle)
+    public PurePursuitData withWaypoints(List<ImmutableVector2f> waypoints)
     {
         return new PurePursuitData(robot, circle, waypoints);
     }

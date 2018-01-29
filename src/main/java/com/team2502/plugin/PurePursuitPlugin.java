@@ -29,6 +29,7 @@ import java.util.Map;
 public class PurePursuitPlugin extends Plugin
 {
 
+
     @Override
     public List<DataType> getDataTypes()
     {
